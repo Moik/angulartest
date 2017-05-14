@@ -1,0 +1,13 @@
+<h1 class="title">Welcome!</h1>
+<div class="slider">
+    <owl-carousel #owlElement
+        [options]="{items: 1, dots: true, nav: true, navText: ['<b><</b>','<b>></b>'], loop: true}"
+        [items]="images">
+        
+        <div class="item" *ngFor="let image of images">
+            <img src="{{image}}"/>
+        </div>
+    </owl-carousel>
+</div>
+
+<p class="redir">Redirect will be in <strong class="seconds">{{ticks}}</strong></p>
