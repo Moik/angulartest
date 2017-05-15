@@ -34,7 +34,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file-loader?name=assets/[name].[hash].[ext]'
+        loader: 'file-loader?name=assets/img/[name].[hash].[ext]'
       },
       {
         test: /\.css$/,
@@ -63,7 +63,8 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
+      template: 'src/index.html',
+      favicon: 'src/assets/img/favicon.ico'
     }),
 
     new webpack.ProvidePlugin({
